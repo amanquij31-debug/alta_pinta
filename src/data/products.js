@@ -38,7 +38,7 @@ export const products = [
     "category": "mochilas",
     "name": "Mochila Urbana Negra",
     "description": "Mochila resistente al agua con compartimento para laptop.",
-    "image": "/products/mochilas/mochilas-01.jpg"
+    "image": "/products/mochilas/mochilas-01.webp"
   }
 ]
 
