@@ -77,15 +77,27 @@
 }
 
 @media (max-width: 640px) {
+  /* Móvil: barra compacta (logo + buscador arriba, links abajo) y sin quedarse fija,
+     para no ocupar un cuarto de la pantalla. */
+  .navbar { position: static; }
   .navbar__inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      'brand search'
+      'links links';
+    align-items: center;
+    gap: 8px 14px;
+    padding: 10px var(--edge);
   }
+  .navbar__brand { grid-area: brand; }
+  .navbar__logo { height: 40px; }
+  .navbar__inner > :last-child { grid-area: search; min-width: 0; }
   .navbar__links {
+    grid-area: links;
     width: 100%;
     justify-content: space-between;
-    gap: 16px;
-    order: 2;
+    gap: 14px;
   }
+  .navbar__link { font-size: 14px; padding: 6px 2px; }
 }
