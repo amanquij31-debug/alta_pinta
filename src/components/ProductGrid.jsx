@@ -9,6 +9,10 @@ export default function ProductGrid({ products }) {
   const visible = products.slice(0, visibleCount)
   const hasMore = visibleCount < products.length
 
+  if (products.length === 0) {
+    return <p className="grid__empty">Pronto cargaremos productos en esta sección.</p>
+  }
+
   return (
     <div>
       <div className="grid">

@@ -31,7 +31,7 @@ export const products = [
     "category": "gorros",
     "name": "Gorro Alta Pinta Classic",
     "description": "Gorro bordado con logo frontal.",
-    "image": "/products/gorros/gorros-01.jpg"
+    "image": ""
   },
   {
     "id": "mochilas-1",

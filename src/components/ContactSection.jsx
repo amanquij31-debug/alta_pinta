@@ -3,7 +3,7 @@ import '../styles/contactsection.css'
 
 export default function ContactSection() {
   return (
-    <section className="contact">
+    <section id="contacto" className="contact">
       <h2 className="contact__title">¿Te interesa alguna pieza?</h2>
       <p className="contact__desc">
         Escríbenos y coordinamos disponibilidad, tallas y entrega.

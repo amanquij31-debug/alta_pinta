@@ -1,8 +1,8 @@
-import { whatsappLink } from '../data/config'
+import { whatsappLink, productMessage } from '../data/config'
 import '../styles/productcard.css'
 
 export default function ProductCard({ product }) {
-  const message = `Hola, me interesa "${product.name}" que vi en el catálogo de Alta Pinta.`
+  const message = productMessage(product)
 
   return (
     <article className="card">

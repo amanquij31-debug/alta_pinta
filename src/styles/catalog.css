@@ -1,0 +1,25 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.filters__btn {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--silver);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 9px 20px;
+  border-radius: 2px;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.filters__btn:hover { border-color: var(--gold); color: var(--white); }
+
+.filters__btn--active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--bg-void);
+}

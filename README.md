@@ -85,3 +85,34 @@ git push -u origin main
 2. Framework preset: **Vite** (se detecta automático).
 3. Build command: `npm run build` — Output directory: `dist`.
 4. Deploy. Cada push a `main` vuelve a desplegar automáticamente.
+
+## Fotos: compresión automática (recomendado)
+
+Con ~400 productos, las fotos del celular (3-5 MB c/u) harían el sitio muy lento.
+Por eso el script puede comprimirlas solo:
+
+1. Una sola vez: `npm install` (instala `sharp`).
+2. Pon las fotos **tal cual las tomaste** en `fotos-originales/<categoria>/`
+   (esa carpeta no se sube a GitHub). Mismo orden que las filas del CSV.
+3. Corre `npm run generar-productos`. Las reduce (máx. 1000 px, webp) y las
+   guarda en `public/products/<categoria>/`. Solo procesa las nuevas.
+4. **Agrega productos nuevos siempre al final** de cada categoría en el CSV y
+   en las fotos, para que los links ya compartidos no cambien.
+
+Si una categoría NO tiene carpeta en `fotos-originales/`, el script usa las fotos
+que estén directo en `public/products/<categoria>/` (sin comprimir).
+
+## Links de producto para WhatsApp
+
+Cada vez que corres `npm run generar-productos` también se crea una página por
+producto en `public/p/<id>.html` (ej. `/p/gorros-1.html`) con foto, nombre y
+descripción. El botón "Consultar por WhatsApp" envía ese link en el mensaje y
+WhatsApp muestra la foto como vista previa. Si cambias de dominio, edita
+`SITE_URL` en `src/data/config.js` y vuelve a correr el script.
+
+## Dónde editar textos
+
+- `src/data/content.js`: "Sobre nosotros", pasos de "Cómo comprar" y horario
+  (el horario no se muestra mientras esté vacío).
+- `src/data/config.js`: WhatsApp, Instagram y `SITE_URL`.
+- Foto de fondo del inicio: `src/styles/hero.css` (clase `.hero__bg`).

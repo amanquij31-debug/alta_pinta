@@ -44,3 +44,9 @@
     gap: 10px;
   }
 }
+
+.grid__empty {
+  color: var(--silver-dim);
+  padding: 48px 0;
+  text-align: center;
+}
