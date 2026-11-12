@@ -48,7 +48,18 @@ const VALID_CATEGORIES = [
 const VALID_SLUGS = new Set(VALID_CATEGORIES.map((c) => c.slug))
 const IMAGE_EXT = new Set(['.jpg', '.jpeg', '.png', '.webp'])
 
+// Excel en español guarda el CSV con punto y coma (;) y en inglés con coma (,).
+// Se detecta solo mirando la primera línea (el encabezado).
+function detectDelimiter(text) {
+  const firstLine = text.split(/\r?\n/)[0] || ''
+  const semis = (firstLine.match(/;/g) || []).length
+  const commas = (firstLine.match(/,/g) || []).length
+  return semis > commas ? ';' : ','
+}
+
 function parseCSV(text) {
+  text = text.replace(/^\uFEFF/, '') // quita la marca invisible de "CSV UTF-8"
+  const delimiter = detectDelimiter(text)
   const rows = []
   let row = []
   let field = ''
@@ -62,7 +73,7 @@ function parseCSV(text) {
       else { field += char }
     } else {
       if (char === '"') inQuotes = true
-      else if (char === ',') { row.push(field); field = '' }
+      else if (char === delimiter) { row.push(field); field = '' }
       else if (char === '\n' || char === '\r') {
         if (char === '\r' && next === '\n') i++
         row.push(field); rows.push(row); row = []; field = ''

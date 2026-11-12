@@ -3,7 +3,7 @@
 // la página y también en el script que genera las páginas de producto.
 export const CONTACT = {
   whatsappNumber: '51979329219',
-  instagram: 'https://www.instagram.com/importodo.peru?stkn=MTFxM3A0eDcybm8yYg==',
+  instagram: 'https://www.instagram.com/altapinta_pe6/',
 }
 
 // Si el primo compra un dominio propio, cámbialo solo aquí y vuelve a correr

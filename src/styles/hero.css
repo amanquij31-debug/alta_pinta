@@ -14,11 +14,11 @@
   top: 0;
   right: 0;
   bottom: 0;
-  width: 62%;
-  background: url('/hero/dueno-1.jpeg') center 15% / cover no-repeat;
+  width: 70%;
+  background: url('/hero/fondo.jpg') left 35% / cover no-repeat;
   filter: saturate(0.85) brightness(0.8);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 48%);
-  mask-image: linear-gradient(to right, transparent 0%, #000 48%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 38%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 38%);
 }
 
 .hero::after {
@@ -97,7 +97,7 @@
     height: 66vw;
     min-height: 260px;
     max-height: 400px;
-    background-position: center 16%;
+    background-position: center 30%;
     filter: saturate(0.9) brightness(0.9);
     -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
     mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);

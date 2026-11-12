@@ -10,6 +10,7 @@ export default function About() {
         {ABOUT.paragraphs.map((text, i) => (
           <p key={i}>{text}</p>
         ))}
+        {ABOUT.tagline && <p className="about__tag">{ABOUT.tagline}</p>}
       </div>
     </section>
   )

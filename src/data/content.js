@@ -2,13 +2,12 @@
 
 export const ABOUT = {
   eyebrow: 'Sobre nosotros',
-  title: 'Hecho para andar con actitud.',
-  // TEXTO PROVISIONAL: reemplázalo por la historia real de la marca.
+  title: 'Lleva tu estilo al siguiente nivel',
   paragraphs: [
-    'Alta Pinta nació de una idea simple: que los accesorios de todos los días también tengan personalidad. Gorros, morrales, mochilas, billeteras y bandoleras para quienes salen a la calle con actitud.',
-    'Elegimos cada pieza pensando en que se vea bien, aguante el ritmo diario y tenga un precio justo. Buscamos modelos que se queden contigo, no modas pasajeras.',
-    'Trabajamos de forma directa: mira el catálogo, elige lo que te guste y escríbenos por WhatsApp. Te confirmamos disponibilidad y coordinamos la entrega.',
+    'Ofrecemos mochilas, morrales y accesorios que combinan diseño, funcionalidad y estilo, para acompañarte en cada aventura.',
+    'No solo se trata de llevar una mochila, sino de expresar quién eres.',
   ],
+  tagline: 'Vive la calle, marca tu estilo, sé auténtico 🖤',
 }
 
 export const STEPS = [
