@@ -87,6 +87,10 @@
   .hero {
     display: block;
     min-height: 0;
+    .hero__title,
+    .hero__sub{
+      text-align: center;
+    }
   }
   .hero__bg {
     position: relative;
