@@ -8,12 +8,10 @@ export default function Hero() {
       <div className="hero__inner">
         <img src="/logo.png" alt="Alta Pinta" className="hero__logo" />
         <h1 className="hero__title">
-          Alta Pinta,
-          <br />
-          estilo propio.
+          Alta Pinta
         </h1>
         <p className="hero__sub">
-          Gorros, morrales, mochilas, billeteras y bandoleras hechos
+          Mochilas, morrales, billeteras, gorros y bandoleras hechos
           para andar por la calle con actitud.
         </p>
         <Link to="/catalogo" className="hero__cta">Ver catálogo</Link>
